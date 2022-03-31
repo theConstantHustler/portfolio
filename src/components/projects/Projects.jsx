@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import portfolio from '../../assets/portfolio.png';
-import jobe from '../../assets/jobe.jpeg';
 import './projects.css';
 // import Swiper core and required modules
 import { Pagination, Navigation } from 'swiper';
@@ -34,7 +33,7 @@ const Projects = () => {
 							id={isFlipped ? 'is_flipped' : ''}
 						>
 							<div className="card project__image">
-								<img src={jobe} alt="" />
+								<img src={portfolio} alt="" />
 								<h5>click to know more</h5>
 							</div>
 							<div className="card project__description">
