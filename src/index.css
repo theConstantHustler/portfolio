@@ -1,13 +1,151 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+	/*========== Colors ==========*/
+	/*Color mode HSL(hue, saturation, lightness)*/
+	--first-hue: 250;
+	--second-hue: 219;
+	--saturation: 66%;
+	--light: 75%;
+	--first-color: #ff1e56;
+	--first-color-alt: #ffadc2; /* -4% */
+	--title-color: hsl(var(--second-hue), 15%, 95%);
+	--text-color: hsl(var(--second-hue), 4%, 55%);
+	--text-color-light: hsl(var(--second-hue), 4%, 55%);
+	--background-color: #000000;
+	--container-color: #111518;
+	--color-white: white;
+	--color-black: black;
+	/*--first-color: hsl(var(--first-hue), var(--saturation), var(--light));*/
+	/*--first-color-alt: hsl(var(--first-hue), var(--saturation), 71%);*/
+	/*--text-color: hsl(var(--second-hue), 8%, 75%);*/
+	/*--background-color: hsl(var(--second-hue), 48%, 8%);*/
+	/*--container-color: hsl(var(--second-hue), 32%, 12%);*/
+
+	/*========== Responsive Container width ==========*/
+	--container-width-lg: 75%;
+	--container-width-md: 86%;
+	--container-width-sm: 90%;
+
+	/*========== Transitions ==========*/
+	--transition: all 500ms ease;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	transition: var(--transition); /* for light mode animation */
+}
+
+/*========== General settings ==========*/
+.container {
+	width: var(--container-width-lg);
+	margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: var(--title-color);
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+section {
+	margin-top: 6rem;
+}
+
+section > h2,
+section > h5 {
+	text-align: center;
+	color: var(--text-color-light);
+}
+
+section > h2 {
+	margin-bottom: 2rem;
+	color: var(--first-color);
+}
+
+a {
+	text-decoration: none;
+	transition: var(--transition);
+	color: var(--first-color);
+}
+
+a:hover {
+	color: var(--color-white);
+}
+
+.btn {
+	width: max-content;
+	display: inline-block;
+	color: var(--first-color);
+	padding: 0.75rem 1.2rem;
+	border-radius: 0.4rem;
+	cursor: pointer;
+	border: 1px solid var(--first-color);
+	transition: var(--transition);
+}
+
+.btn:hover {
+	background: var(--color-white);
+	color: var(--color-black);
+	border-color: transparent;
+}
+
+.btn-primary {
+	background: var(--first-color);
+	color: var(--background-color);
+}
+
+img {
+	display: block;
+	width: 100%;
+	object-fit: cover;
+}
+
+/*========== Media Queries - Medium devices ==========*/
+@media screen and (max-width: 1024px) {
+	.container {
+		width: var(--container-width-md);
+	}
+
+	section {
+		margin-top: 4rem;
+	}
+}
+
+/*========== Media Queries - Small devices ==========*/
+@media screen and (max-width: 600px) {
+	.container {
+		width: var(--container-width-sm);
+	}
+
+	section {
+		margin-top: 2rem;
+	}
 }

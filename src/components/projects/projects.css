@@ -1,0 +1,140 @@
+.projects__container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+	width: 40% !important;
+}
+
+.project__item {
+	background: var(--container-color);
+	padding: 1.3rem;
+	border-radius: 2rem;
+	border: 1px solid transparent;
+	transition: var(--transition);
+}
+
+/*.project__item:hover {
+	background: transparent;
+	border: 1px solid var(--color-white);
+	transition: var(--transition);
+}*/
+
+.project__item h3 {
+	margin: 1.5rem 0 1rem;
+}
+
+.project__cta {
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.swiper-pagination-bullet {
+	border: 1px solid var(--color-white);
+}
+.swiper-pagination-bullet-active {
+	background: var(--color-white) !important;
+}
+
+.project__image {
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+		rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.project__image h5 {
+	position: absolute;
+	border: 1px solid var(--first-color);
+	padding: 0.6rem;
+	visibility: hidden;
+	border-radius: 0.4rem;
+	backdrop-filter: blur(10px);
+	transform: var(--transition);
+}
+
+.project__image:hover img {
+	opacity: 0.3;
+	transition: 0.3s;
+}
+
+.project__image:hover h5 {
+	visibility: visible;
+}
+
+.project__description {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/*===== CARD ANIMATIONs ======*/
+.rotation__card {
+	height: 15rem;
+	margin: 0 auto 1rem;
+	perspective: 1000px;
+}
+
+#is_flipped {
+	transform: rotateX(180deg);
+}
+
+.inner__card {
+	width: 100%;
+	height: 100%;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+	cursor: pointer;
+	position: relative;
+}
+
+.card {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	overflow: hidden;
+	border-radius: 2rem;
+}
+
+.project__image,
+.project__description {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: translateZ(70px) scale(0.94);
+	z-index: 2;
+}
+
+.project__description_content {
+	text-align: center;
+}
+
+.project__description {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	transform: rotateX(180deg);
+	padding: 0 0.5rem;
+}
+
+/*========== Media Queries - Medium devices ==========*/
+@media screen and (max-width: 1024px) {
+	.projects__container {
+		width: var(--container-width-md) !important;
+	}
+
+	.project__cta {
+		margin-bottom: 0.5rem;
+	}
+}
+
+/*========== Media Queries - Small devices ==========*/
+@media screen and (max-width: 600px) {
+	.projects__container {
+		width: var(--container-width-sm) !important;
+	}
+
+	.project__cta {
+		margin-bottom: 0.7rem;
+	}
+
+	.project__description_content {
+		padding: 0 0.5rem;
+	}
+}
