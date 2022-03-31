@@ -1,6 +1,6 @@
 import React from 'react';
 import CTA from './CTA';
-import me from '../../assets/dp.png';
+import me from '../../assets/shadow.jpeg';
 import Socials from './Socials';
 import ScrollDown from './ScrollDown';
 import './header.css';

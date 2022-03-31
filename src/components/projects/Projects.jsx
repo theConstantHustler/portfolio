@@ -47,10 +47,10 @@ const Projects = () => {
 							</div>
 						</div>
 					</div>
-					<h3>Jobe - personal storage solution</h3>
+					<h3>Personal Portfolio website</h3>
 					<div className="project__cta">
 						<a
-							href="https://github.com/theConstantHustler"
+							href="https://github.com/theConstantHustler/portfolio"
 							target="_blank"
 							className="btn"
 							rel="noreferrer"
@@ -90,7 +90,7 @@ const Projects = () => {
 							</div>
 						</div>
 					</div>
-					<h3>Personal Portfolio website</h3>
+					<h3>Jobe - personal storage solution</h3>
 					<div className="project__cta">
 						<a
 							href="https://github.com"

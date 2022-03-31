@@ -10,13 +10,17 @@ const Footer = () => {
 			</a>
 			<div className="footer__social">
 				<a
-					href="https://linkledin.com"
+					href="https://www.linkedin.com/in/gnishanth/"
 					target="_blank"
 					rel="noreferrer"
 				>
 					<BsLinkedin className="icon" />
 				</a>
-				<a href="https://github.com" target="_blank" rel="noreferrer">
+				<a
+					href="https://github.com/theConstantHustler"
+					target="_blank"
+					rel="noreferrer"
+				>
 					<BsGithub className="icon" />
 				</a>
 			</div>
