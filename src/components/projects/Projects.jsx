@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import portfolio from '../../assets/portfolio.png';
 import './projects.css';
 // import Swiper core and required modules
+/* eslint-disable no-unused-vars */
 import { Pagination, Navigation } from 'swiper';
+/* eslint-enable no-unused-vars */
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -48,13 +50,19 @@ const Projects = () => {
 					<h3>Jobe - personal storage solution</h3>
 					<div className="project__cta">
 						<a
-							href="https://github.com"
+							href="https://github.com/theConstantHustler"
 							target="_blank"
 							className="btn"
+							rel="noreferrer"
 						>
 							GitHub
 						</a>
-						<a href="#" target="_blank" className="btn btn-primary">
+						<a
+							href="https://nishanthgunupudi.com"
+							target="_blank"
+							rel="noreferrer"
+							className="btn btn-primary"
+						>
 							Live Demo
 						</a>
 					</div>
@@ -88,10 +96,16 @@ const Projects = () => {
 							href="https://github.com"
 							target="_blank"
 							className="btn"
+							rel="noreferrer"
 						>
 							GitHub
 						</a>
-						<a href="#" target="_blank" className="btn btn-primary">
+						<a
+							href="https://github.com"
+							target="_blank"
+							className="btn btn-primary"
+							rel="noreferrer"
+						>
 							Live Demo
 						</a>
 					</div>
