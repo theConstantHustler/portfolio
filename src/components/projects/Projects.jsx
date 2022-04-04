@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import portfolio from '../../assets/portfolio.png';
+//import portfolio from '../../assets/portfolio.png';
+import portfolio from '../../assets/my-portfolio-splash.png';
+import wip from '../../assets/wip.png';
 import './projects.css';
 // import Swiper core and required modules
 /* eslint-disable no-unused-vars */
@@ -39,11 +41,17 @@ const Projects = () => {
 								<h5>click to know more</h5>
 							</div>
 							<div className="card project__description">
-								<p className="project__description_content">
-									Lorem ipsum dolor, sit amet consectetur
-									adipisicing elit. Quis blanditiis
-									voluptatibus vitae?`
-								</p>
+								<div className="project__tags">
+									<button className="project__tag">
+										HTML
+									</button>
+									<button className="project__tag">
+										CSS
+									</button>
+									<button className="project__tag">
+										ReactJS
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -78,19 +86,25 @@ const Projects = () => {
 							id={isFlipped ? 'is_flipped' : ''}
 						>
 							<div className="card project__image">
-								<img src={portfolio} alt="" />
+								<img src={wip} alt="" />
 								<h5>click to know more</h5>
 							</div>
 							<div className="card project__description">
-								<p className="project__description_content">
-									Lorem ipsum dolor, sit amet consectetur
-									adipisicing elit. Quis blanditiis
-									voluptatibus vitae?`
-								</p>
+								<div className="project__tags">
+									<button className="project__tag">
+										NodeJS
+									</button>
+									<button className="project__tag">
+										Serverless
+									</button>
+									<button className="project__tag">
+										ReactJS, React-Native
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>
-					<h3>Jobe - personal storage solution</h3>
+					<h3>Jobe - storage solution</h3>
 					<div className="project__cta">
 						<a
 							href="https://github.com"

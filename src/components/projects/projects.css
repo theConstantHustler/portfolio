@@ -106,6 +106,26 @@
 	text-align: center;
 }
 
+.project__tag:not(:last-child) {
+	margin-right: 2rem;
+}
+
+.project__tag {
+	font-family: 'Poppins', sans-serif;
+	padding: 0.3rem 1rem;
+	background: transparent;
+	color: var(--color-white);
+	border: 1px solid var(--first-color);
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
+
+.project__tag:hover {
+	background: var(--first-color);
+	color: var(--background-color);
+	font-weight: 500;
+}
+
 .project__description {
 	background-color: var(--background-color);
 	color: var(--text-color);
